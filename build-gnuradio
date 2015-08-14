@@ -81,9 +81,11 @@ then
 	exit
 fi
 
-VERBOSE=No
+# VERBOSE=No
+VERBOSE=Yes
 JFLAG=""
-LOGDEV=/dev/null
+# LOGDEV=/dev/null
+LOGDEV=/dev/stdout
 USERSLIST=None
 JOSHMODE=False
 UTAG=None
