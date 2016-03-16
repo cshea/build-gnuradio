@@ -24,7 +24,7 @@ A simple paypal transfer to mleech@ripnet.com is all you need to do.
 !EOF!
 
 	echo -n "Send success/fail info to sbrac.org?"
-	read ans
+	ans=yes
 		case $ans in
 			y|Y|YES|yes|Yes)
 				wget http://www.sbrac.org/bgrstats.php?status="$1"?systype=${SYSTYPE}?sysinfo="`uname -a`" >/dev/null 2>&1
@@ -282,7 +282,7 @@ then
 	done
 	echo " "
 	echo -n Remove them'?'
-	read ans
+	ans=yes
 	
 	case $ans in
 		y|Y|YES|yes|Yes)
@@ -659,7 +659,7 @@ function gitfetch {
 	echo This script will fetch Gnu Radio version $V from the repositories, along with compatible
 	echo  extras.
 	echo -n Is this OK?
-	read ans
+	ans=yes
 	
 	case $ans in
 		Y|y|YES|yes|Yes)
@@ -1367,7 +1367,7 @@ function sudocheck {
 	then
 		echo SUDO privileges are required 
 		echo -n Do you have SUDO privileges'?'
-		read ans
+		ans=yes
 		case $ans in
 			y|Y|YES|yes|Yes)
 				echo Continuing with script
