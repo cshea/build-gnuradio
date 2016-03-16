@@ -238,15 +238,6 @@ echo
 echo
 echo -n Proceed?
 
-read ans
-case $ans in
-	y|Y|YES|yes|Yes)
-		PROCEED=y
-	;;
-	*)
-		exit
-esac
-
 SPACE=`df $HOME| grep -v blocks|grep '%'`
 SPACE=`echo $SPACE | awk '/./ {n=NF-2; printf ("%d\n", $n/1.0e3)}'`
 
